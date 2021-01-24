@@ -1,22 +1,3 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
-server = app.server
-
-top_markdown_text = '''
-This is my first deployed app
-'''
-
-app.layout = html.Div([
-
-    dcc.Markdown(children=top_markdown_text),
-
-])
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
+version https://git-lfs.github.com/spec/v1
+oid sha256:29038af33f5174b2320b2191beb3ff616b285ef8c8f999f215df9e4a627544cb
+size 461
