@@ -20,7 +20,6 @@ from sklearn.metrics import mean_absolute_error
 os.chdir(os.getcwd())
 
 df_dash = pd.read_csv('data/datav12.csv')
-print(df_dash)
 
 locations = sorted(df_dash['naam_meetlocatie_mst'].unique(), key=len)
 locations.reverse()
