@@ -13,13 +13,15 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 from datetime import datetime, timedelta
 from sklearn.metrics import mean_absolute_error
+import requests
 # from sklearn.preprocessing import MinMaxScaler
 # import tensorflow as tf
 # from keras.models import model_from_json
 
 os.chdir(os.getcwd())
 
-df_dash = pd.read_csv('data/datav12.csv')
+response = requests.get('https://github.com/basvanderbijl/OBPAmsterdamTrafficForecast/raw/main/data/datav12.csv')
+df_dash = pd.read_csv(response.content)
 
 locations = sorted(df_dash['naam_meetlocatie_mst'].unique(), key=len)
 locations.reverse()
