@@ -41,7 +41,7 @@ with open('pickles/tbats_daily_all.pickle', 'rb') as file:
 earliest_date = date(2016,1,1)
 latest_date = date(2022,12,31)
 
-algorithm_list = ['TBATS hourly', 'TBATS daily', 'Seasonal Naïve']
+algorithm_list = ['TBATS hourly', 'TBATS daily', 'Seasonal Naive']
 area_locations = df_dash.groupby('naam_meetlocatie_mst').agg({'start_locatie_latitude': 'last', 'start_locatie_longitude': 'last'}).reset_index()
 
 img_logo_vu = 'Vu_logo_blauw.png'
